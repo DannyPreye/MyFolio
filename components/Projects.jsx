@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 
 import { projects } from './project';
-import { ProjectCard } from './ProjectCard';
+import { ProjectCard } from './index';
 
 import colorSharp from '../assets/img/color-sharp2.png';
 
@@ -24,17 +24,14 @@ export default function Projects() {
                   <Nav.Link eventKey='second'>Tab two</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey='third' disabled>
-                    Tab three
-                  </Nav.Link>
+                  <Nav.Link eventKey='third'>Tab three</Nav.Link>
                 </Nav.Item>
               </Nav>
-              <Tab.Content>
+              <Tab.Content style={{ marginTop: '3rem' }}>
                 <Tab.Pane eventKey='first'>
                   <Row>
                     {projects.map((project, index) => {
-                      return;
-                      <ProjectCard key={index} {...project} />;
+                      return <ProjectCard key={index} {...project} />;
                     })}
                   </Row>
                 </Tab.Pane>

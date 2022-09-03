@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import contactImg from '../assets/img/contact-img.svg';
 
-export default function Contact() {
+export default function ContactForm() {
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -21,6 +21,9 @@ export default function Contact() {
   const onFormUpdate = (category, value) => {
     setFormDetails({ ...formDetails, [category]: value });
   };
+
+  const handleSubmit = () => {};
+
   return (
     <section className='contact' id='connect'>
       <Container>
@@ -30,7 +33,7 @@ export default function Contact() {
           </Col>
           <Col md={6}>
             <h2>Get in Touch</h2>
-            <form method='Post'>
+            <form method='Post' onSubmit={handleSubmit}>
               <Row>
                 <Col sm={6} className='px-1'>
                   <input

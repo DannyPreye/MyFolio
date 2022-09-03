@@ -31,8 +31,12 @@ export default function Navigation() {
   }, []);
 
   return (
-    <Navbar expand='lg' className={scrolled ? 'scrolled' : ''}>
-      <Container className='fgg'>
+    <Navbar
+      style={{ background: '#212121' }}
+      expand='md'
+      className={scrolled ? 'scrolled' : ''}
+    >
+      <Container>
         <Navbar.Brand href='#home'></Navbar.Brand>
         <Image src={Logo} alt='logo' />
         <Navbar.Toggle aria-controls='basic-navbar-nav'>

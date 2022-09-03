@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Banner, Navigation, Skills, Projects } from '../components';
+import { Banner, Navigation, Skills, Projects, Contact } from '../components';
 import styles from '../styles/Home.module.css'
 
 
@@ -19,6 +19,7 @@ export default function Home() {
         <Banner />
         <Skills />
         <Projects />
+        <Contact />
       </main>
 
       <footer >
